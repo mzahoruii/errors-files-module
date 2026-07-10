@@ -95,12 +95,6 @@ complex_data = [
 # print(f"Suma: {suma}")
 
 
-# clients_names = [
-#     "Alice Smith", "Bob", "Charlie Brown", "Diana", "Eve Adams",
-#     "Frank", "Grace Kelly", "Hank", "Ivy Poison", "Jack",
-#     "Karen Page", "Leo", "Mona Lisa", "Ned", "Olivia Pope",
-#     "Paul", "Quinn Fabray", "Rachel", "Steve Rogers", "Tony"
-# ]
 # surname=[]
 # for client in clients_names:
 #     try:
@@ -108,3 +102,24 @@ complex_data = [
 #     except IndexError:
 #         surname.append("unknown")
 # print(surname)
+
+# departments_avr_salary = {}
+# for key in departments_sales:
+#     try:
+#         avr_sal=departments_sales[key]/departments_employees[key]
+#         departments_avr_salary[key]=avr_sal
+#         print(f"Average in {key}: {avr_rew}")
+#     except ZeroDivisionError:
+#         print("Department {key} dont have employees")
+#         departments_avr_salary[key]=0
+# print(departments_avr_salary)
+
+
+# roi_results = []
+# for i in ad_campaigns:
+#     try:
+#         ROI=(i['revenue']-i['cost'])/i['cost']
+#     except ZeroDivisionError:
+#         ROI=0
+#     roi_results.append(ROI)
+#     print(f"{i['campaign']}: ROI = {ROI}")
