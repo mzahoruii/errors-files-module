@@ -65,3 +65,46 @@ complex_data = [
 ]
 
 # Ваш код для завдань нижче:
+# try:
+#     a=int(input("Number 1: "))
+#     b=int(input("Number 2: "))
+#     print(a/b)
+# except ZeroDivisionError:
+#     print("Division by zero is prohibited")
+# except ValueError:
+#     print("Letters are not valid")
+# finally:
+#     print("The answer is:")
+#
+#
+# statuses = {"Alice": "Active", "Bob": "Vacation"}
+# try
+# print(statuses["Alice"])
+# except KeyError:
+#     print("Not found")
+
+
+
+# suma=0
+# for transaction in raw_transactions:
+#     try:
+#         transaction_status = float(transaction)
+#         suma+=transaction_status
+#     except ValueError:
+#         print(f"Skipped transaction {transaction}, because it is Value Error")
+# print(f"Suma: {suma}")
+
+
+# clients_names = [
+#     "Alice Smith", "Bob", "Charlie Brown", "Diana", "Eve Adams",
+#     "Frank", "Grace Kelly", "Hank", "Ivy Poison", "Jack",
+#     "Karen Page", "Leo", "Mona Lisa", "Ned", "Olivia Pope",
+#     "Paul", "Quinn Fabray", "Rachel", "Steve Rogers", "Tony"
+# ]
+# surname=[]
+# for client in clients_names:
+#     try:
+#         surname.append(client.split(" ")[1])
+#     except IndexError:
+#         surname.append("unknown")
+# print(surname)
