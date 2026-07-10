@@ -123,3 +123,32 @@ complex_data = [
 #         ROI=0
 #     roi_results.append(ROI)
 #     print(f"{i['campaign']}: ROI = {ROI}")
+
+complex_data = [
+    {"client": "Alice Smith", "amount": "1200"},
+    {"client": "Bob", "amount": "400"},
+    {"client": "Charlie Brown", "amount": "N/A"},
+    {"client": "Diana Prince", "amount": "5500"},
+    {"client": "Eve", "amount": "Error"},
+    {"client": "Frank Castle", "amount": "800"},
+    {"client": "Grace", "amount": "150.50"},
+    {"client": "Hank Pym", "amount": "-"},
+    {"client": "Ivy", "amount": "3000"},
+    {"client": "Jack Reacher", "amount": "NULL"}
+]
+
+simple_data={}
+for client in complex_data:
+
+    try:
+        surname=client["client"].split()[1]
+        transaction=int(client["amount"])
+        simple_data[surname]=transaction
+    except IndexError:
+        print(f"Skipping {client['client']} because it has no surname")
+    except ValueError:
+        print(f"Skipping {client['client']} because it is broken")
+    except Exception as e:
+        print(f"Unknown error {e}")
+    finally:
+        print(f"{client['client']} processed")
