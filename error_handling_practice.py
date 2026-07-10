@@ -65,3 +65,90 @@ complex_data = [
 ]
 
 # Ваш код для завдань нижче:
+# try:
+#     a=int(input("Number 1: "))
+#     b=int(input("Number 2: "))
+#     print(a/b)
+# except ZeroDivisionError:
+#     print("Division by zero is prohibited")
+# except ValueError:
+#     print("Letters are not valid")
+# finally:
+#     print("The answer is:")
+#
+#
+# statuses = {"Alice": "Active", "Bob": "Vacation"}
+# try
+# print(statuses["Alice"])
+# except KeyError:
+#     print("Not found")
+
+
+
+# suma=0
+# for transaction in raw_transactions:
+#     try:
+#         transaction_status = float(transaction)
+#         suma+=transaction_status
+#     except ValueError:
+#         print(f"Skipped transaction {transaction}, because it is Value Error")
+# print(f"Suma: {suma}")
+
+
+# surname=[]
+# for client in clients_names:
+#     try:
+#         surname.append(client.split(" ")[1])
+#     except IndexError:
+#         surname.append("unknown")
+# print(surname)
+
+# departments_avr_salary = {}
+# for key in departments_sales:
+#     try:
+#         avr_sal=departments_sales[key]/departments_employees[key]
+#         departments_avr_salary[key]=avr_sal
+#         print(f"Average in {key}: {avr_rew}")
+#     except ZeroDivisionError:
+#         print("Department {key} dont have employees")
+#         departments_avr_salary[key]=0
+# print(departments_avr_salary)
+
+
+# roi_results = []
+# for i in ad_campaigns:
+#     try:
+#         ROI=(i['revenue']-i['cost'])/i['cost']
+#     except ZeroDivisionError:
+#         ROI=0
+#     roi_results.append(ROI)
+#     print(f"{i['campaign']}: ROI = {ROI}")
+
+complex_data = [
+    {"client": "Alice Smith", "amount": "1200"},
+    {"client": "Bob", "amount": "400"},
+    {"client": "Charlie Brown", "amount": "N/A"},
+    {"client": "Diana Prince", "amount": "5500"},
+    {"client": "Eve", "amount": "Error"},
+    {"client": "Frank Castle", "amount": "800"},
+    {"client": "Grace", "amount": "150.50"},
+    {"client": "Hank Pym", "amount": "-"},
+    {"client": "Ivy", "amount": "3000"},
+    {"client": "Jack Reacher", "amount": "NULL"}
+]
+
+simple_data={}
+for client in complex_data:
+
+    try:
+        surname=client["client"].split()[1]
+        transaction=int(client["amount"])
+        simple_data[surname]=transaction
+    except IndexError:
+        print(f"Skipping {client['client']} because it has no surname")
+    except ValueError:
+        print(f"Skipping {client['client']} because it is broken")
+    except Exception as e:
+        print(f"Unknown error {e}")
+    finally:
+        print(f"{client['client']} processed")
